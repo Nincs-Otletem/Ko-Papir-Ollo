@@ -1,0 +1,15 @@
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.exe.config
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.exe
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.pdb
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.AssemblyReference.cache
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainWindow.g.cs
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\App.g.cs
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.cache
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.lref
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainWindow.baml
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.g.resources
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko_Papir_Ollo.Properties.Resources.resources
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.GenerateResource.cache
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.CoreCompileInputs.cache
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.exe
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.pdb

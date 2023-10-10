@@ -1,0 +1,18 @@
+﻿<Window x:Class="Ko_Papir_Ollo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ko_Papir_Ollo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Adja meg a nevét:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="20,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="519"/>
+        <Label Content="Adja meg a játék típusát:" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="kopapirollopipa" Content="kő - papír - olló" HorizontalAlignment="Left" Margin="27,107,0,0" VerticalAlignment="Top"  Checked="kopapirollopipa_Checked"/>
+        <CheckBox x:Name="kopapirollo_pipa" Content="kő - papír - olló - gyík - Spock" HorizontalAlignment="Left" Margin="27,143,0,0" VerticalAlignment="Top" Checked="kopapirollo_pipa_Checked"/>
+        <Button Content="Játék indítása" HorizontalAlignment="Left" Margin="604,320,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
