@@ -23,8 +23,8 @@ namespace Ko_Papir_Ollo
         public MainWindow()
         {
             InitializeComponent();
-            kopapirollopipa.IsChecked = true ;
-            kopapirollo_pipa.IsChecked = false;
+            KPO_pipa.IsChecked = true ;
+            KPOGS_pipa.IsChecked = false;
             nevbox.Text = "";
             hiba.Content = "";
         }
@@ -33,9 +33,18 @@ namespace Ko_Papir_Ollo
         {
             if (nevbox.Text != "")
             {
-                Window1 window1 = new Window1();
-                this.Close();
-                window1.Show();
+                if (KPO_pipa.IsChecked == true)
+                {
+                    KPO_Window KPOWindow = new KPO_Window();
+                    this.Close();
+                    KPOWindow.Show();
+                }
+                if (KPOGS_pipa.IsChecked == true)
+                {
+                    KPOGS_Window KPOGSWindow = new KPOGS_Window();
+                    this.Close();
+                    KPOGSWindow.Show();
+                }
             }
             else
             {

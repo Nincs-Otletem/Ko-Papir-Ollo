@@ -17,9 +17,9 @@ namespace Ko_Papir_Ollo
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class KPOGS_Window : Window
     {
-        public Window1()
+        public KPOGS_Window()
         {
             InitializeComponent();
         }
