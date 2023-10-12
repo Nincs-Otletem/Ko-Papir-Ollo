@@ -25,21 +25,21 @@ namespace Ko_Papir_Ollo
             InitializeComponent();
             kopapirollopipa.IsChecked = true ;
             kopapirollo_pipa.IsChecked = false;
+            nevbox.Text = "";
+            hiba.Content = "";
         }
 
-        private void kopapirollo_pipa_Checked(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (kopapirollopipa.IsChecked == true)
+            if (nevbox.Text != "")
             {
-                kopapirollopipa.IsChecked = false;
+                Window1 window1 = new Window1();
+                this.Close();
+                window1.Show();
             }
-        }
-
-        private void kopapirollopipa_Checked(object sender, RoutedEventArgs e)
-        {
-            if (kopapirollo_pipa.IsChecked == true)
+            else
             {
-                kopapirollo_pipa.IsChecked = false;
+                hiba.Content = "Adj meg egy nevet!!";
             }
         }
     }
