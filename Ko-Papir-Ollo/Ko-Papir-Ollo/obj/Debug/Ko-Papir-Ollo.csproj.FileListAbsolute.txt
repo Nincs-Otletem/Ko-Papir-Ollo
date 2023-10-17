@@ -33,3 +33,7 @@ G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Deb
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.baml
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.baml
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.g.cs
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.baml
+C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.baml

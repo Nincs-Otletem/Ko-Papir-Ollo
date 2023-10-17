@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <Label Content="KPOGS" HorizontalAlignment="Left" Margin="151,114,0,0" VerticalAlignment="Top"/>
-
+        <ComboBox x:Name="KPOGS_valasztas" HorizontalAlignment="Left" Margin="81,90,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="KPOGS_valasztas_SelectionChanged"/>
+        <TextBox x:Name="eredmeny_KPOGS" HorizontalAlignment="Left" Margin="65,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Height="134" IsHitTestVisible="False"/>
+        <Button x:Name="Lock_in_KPOGS" Content="Rendben" HorizontalAlignment="Left" Margin="650,373,0,0" VerticalAlignment="Top" Click="Lock_in_KPOGS_Click"/>
     </Grid>
 </Window>

@@ -112,8 +112,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="image\" />
+    <Resource Include="image\KPOGyS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\KPO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
