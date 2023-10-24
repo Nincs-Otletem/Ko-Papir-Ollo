@@ -96,29 +96,4 @@ namespace Ko_Papir_Ollo {
             switch (connectionId)
             {
             case 1:
-            this.KPO_valasztas = ((System.Windows.Controls.ComboBox)(target));
-            
-            #line 12 "..\..\KPO_Page.xaml"
-            this.KPO_valasztas.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.KPO_valasztas_SelectionChanged);
-            
-            #line default
-            #line hidden
-            return;
-            case 2:
-            this.Lock_in_button = ((System.Windows.Controls.Button)(target));
-            
-            #line 13 "..\..\KPO_Page.xaml"
-            this.Lock_in_button.Click += new System.Windows.RoutedEventHandler(this.Lock_in_button_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 3:
-            this.eredmenyek = ((System.Windows.Controls.TextBox)(target));
-            return;
-            }
-            this._contentLoaded = true;
-        }
-    }
-}
-
+            this.KPO_valasztas = ((System.Windows.Controls.ComboBox)(tar
