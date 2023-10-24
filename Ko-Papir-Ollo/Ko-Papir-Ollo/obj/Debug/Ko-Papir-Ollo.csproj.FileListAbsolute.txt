@@ -17,6 +17,7 @@ G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Deb
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.exe
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.pdb
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.AssemblyReference.cache
+G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.SuggestedBindingRedirects.cache
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainWindow.g.cs
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\App.g.cs
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.cache
@@ -36,9 +37,22 @@ C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Pa
 C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
 C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.baml
 C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.baml
-G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainPage.g.cs
-G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainPage.baml
-G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Page.g.cs
-G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Page.g.cs
-G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Page.baml
-G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Page.baml
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.exe.config
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.exe
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\bin\Debug\Ko-Papir-Ollo.pdb
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainWindow.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\App.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.cache
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.lref
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainWindow.baml
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.baml
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.baml
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.g.resources
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko_Papir_Ollo.Properties.Resources.resources
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.exe
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.pdb
