@@ -23,33 +23,10 @@ namespace Ko_Papir_Ollo
         public MainWindow()
         {
             InitializeComponent();
-            KPO_pipa.IsChecked = true ;
-            KPOGS_pipa.IsChecked = false;
-            nevbox.Text = "";
-            hiba.Content = "";
+            MainPage mainPage = new MainPage();
+            MainFrame.Navigate(mainPage);
+            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (nevbox.Text != "")
-            {
-                if (KPO_pipa.IsChecked == true)
-                {
-                    KPO_Window KPOWindow = new KPO_Window();
-                    this.Close();
-                    KPOWindow.Show();
-                }
-                if (KPOGS_pipa.IsChecked == true)
-                {
-                    KPOGS_Window KPOGSWindow = new KPOGS_Window();
-                    this.Close();
-                    KPOGSWindow.Show();
-                }
-            }
-            else
-            {
-                hiba.Content = "Adj meg egy nevet!!";
-            }
-        }
     }
 }

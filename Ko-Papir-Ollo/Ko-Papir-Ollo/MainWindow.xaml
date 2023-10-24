@@ -7,13 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Adja meg a nevét:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nevbox" HorizontalAlignment="Left" Margin="20,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="519"/>
-        <Label Content="Adja meg a játék típusát:" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
-        <Button Content="Játék indítása" HorizontalAlignment="Left" Margin="604,320,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <RadioButton x:Name="KPO_pipa" Content="kő - papír - olló" HorizontalAlignment="Left" Margin="20,99,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="KPOGS_pipa" Content="kő - papír - olló - gyík - Spock" HorizontalAlignment="Left" Margin="20,130,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="hiba" Content="" HorizontalAlignment="Left" Margin="576,283,0,0" VerticalAlignment="Top"/>
+        <Frame x:Name="MainFrame" Content="Frame" NavigationUIVisibility="Hidden"/>
+
 
     </Grid>
 </Window>

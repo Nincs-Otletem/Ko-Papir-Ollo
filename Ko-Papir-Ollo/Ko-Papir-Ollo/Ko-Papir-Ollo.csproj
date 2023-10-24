@@ -59,12 +59,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="KPOGS_Page.xaml.cs">
+      <DependentUpon>KPOGS_Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KPOGS_Window.xaml.cs">
       <DependentUpon>KPOGS_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KPO_Page.xaml.cs">
+      <DependentUpon>KPO_Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="KPO_Window.xaml.cs">
       <DependentUpon>KPO_Window.xaml</DependentUpon>
     </Compile>
+    <Page Include="KPOGS_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KPO_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +90,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
