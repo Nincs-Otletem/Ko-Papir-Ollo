@@ -32,6 +32,7 @@ G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Deb
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.baml
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.baml
+<<<<<<< Updated upstream
 C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.g.cs
 C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
 C:\Users\horvath.mark_csany-z\Documents\GitHub\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.baml
@@ -61,3 +62,16 @@ G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Deb
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Page.baml
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Page.baml
 G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainPage.baml
+=======
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.AssemblyReference.cache
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.SuggestedBindingRedirects.cache
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainWindow.g.cs
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Window.g.cs
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Window.g.cs
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Page1.g.cs
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\App.g.cs
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.cache
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo_MarkupCompile.lref
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.exe
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.pdb
+>>>>>>> Stashed changes

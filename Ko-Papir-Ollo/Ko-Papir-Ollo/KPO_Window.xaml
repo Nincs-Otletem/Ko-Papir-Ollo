@@ -7,9 +7,14 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
+<<<<<<< Updated upstream
         <ComboBox x:Name="KPO_valasztas" HorizontalAlignment="Left" Margin="82,135,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="KPO_valasztas_SelectionChanged"/>
         <Button x:Name="Lock_in_button" Content="Rendben" HorizontalAlignment="Left" Margin="624,346,0,0" VerticalAlignment="Top" Click="Lock_in_button_Click"/>
         <TextBox x:Name="eredmenyek" HorizontalAlignment="Left" Margin="82,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" Height="103" IsHitTestVisible="False"/>
+=======
+        <Label Content="KPO" HorizontalAlignment="Left" Margin="246,180,0,0" VerticalAlignment="Top"/>
+        <Button Content="Vissza" HorizontalAlignment="Left" Margin="672,380,0,0" VerticalAlignment="Top"  Click="BackButton"/>
+>>>>>>> Stashed changes
 
     </Grid>
 </Window>

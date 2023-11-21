@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\
+=======
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\
+>>>>>>> Stashed changes
 Ko_Papir_Ollo
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\App.xaml
 31133410283
+=======
+D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\App.xaml
+41966772299
+>>>>>>> Stashed changes
 
-8309479289
+9-1884646775
 17-439003439
-MainWindow.xaml;KPOGS_Window.xaml;KPO_Window.xaml;
+MainWindow.xaml;KPOGS_Window.xaml;KPO_Window.xaml;Page1.xaml;
 
 True
 
