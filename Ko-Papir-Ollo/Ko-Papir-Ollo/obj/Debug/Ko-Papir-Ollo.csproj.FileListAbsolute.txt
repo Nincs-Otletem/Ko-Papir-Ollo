@@ -75,3 +75,5 @@ D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Deb
 D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.exe
 D:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.pdb
 >>>>>>> Stashed changes
+G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Page1.g.cs
+G:\Saját meghajtó\prog\forms\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Page1.baml
