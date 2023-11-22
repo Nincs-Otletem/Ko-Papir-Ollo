@@ -8,10 +8,35 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="KPO_Page">
 
-    <Grid>
-        <ComboBox x:Name="KPO_valasztas" HorizontalAlignment="Left" Margin="82,135,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="KPO_valasztas_SelectionChanged"/>
-        <Button x:Name="Lock_in_button" Content="Rendben" HorizontalAlignment="Left" Margin="624,346,0,0" VerticalAlignment="Top" Click="Lock_in_button_Click"/>
-        <TextBox x:Name="eredmenyek" HorizontalAlignment="Left" Margin="82,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" Height="103" IsHitTestVisible="False"/>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <TextBlock HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="XY eddigi eredményei" VerticalAlignment="Stretch"/>
+
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBox x:Name="eredmenyek" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" IsHitTestVisible="False" Text="Kő Papír Olló" BorderThickness="0" BorderBrush="Transparent"/>
+            </ScrollViewer>
+        </Border>
+
+        <TextBlock HorizontalAlignment="Stretch"  Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Válasszon alakzatot, majd nyomjon OK-t:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="KPO_valasztas" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" SelectionChanged="KPO_valasztas_SelectionChanged"/>
+        <Button x:Name="Lock_in_button" Content="Rendben" HorizontalAlignment="Center"  Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Click="Lock_in_button_Click"/>
+
+        <Border Grid.Row="4" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBox x:Name="jatek" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" IsHitTestVisible="False" BorderThickness="0" BorderBrush="Transparent"/>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Page>

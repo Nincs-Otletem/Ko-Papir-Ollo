@@ -7,10 +7,36 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="KPOGS_Page">
+    
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-    <Grid>
-        <ComboBox x:Name="KPOGS_valasztas" HorizontalAlignment="Left" Margin="81,90,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="KPOGS_valasztas_SelectionChanged"/>
-        <TextBox x:Name="eredmeny_KPOGS" HorizontalAlignment="Left" Margin="65,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Height="134" IsHitTestVisible="False"/>
-        <Button x:Name="Lock_in_KPOGS" Content="Rendben" HorizontalAlignment="Left" Margin="650,373,0,0" VerticalAlignment="Top" Click="Lock_in_KPOGS_Click"/>
+        <TextBlock HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="XY eddigi eredményei" VerticalAlignment="Stretch"/>
+
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBox x:Name="eredmenyek" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" IsHitTestVisible="False" Text="Kő Papír Olló" BorderThickness="0" BorderBrush="Transparent"/>
+            </ScrollViewer>
+        </Border>
+
+        <TextBlock HorizontalAlignment="Stretch"  Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Válasszon alakzatot, majd nyomjon OK-t:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="KPOGS_valasztas" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" SelectionChanged="KPOGS_valasztas_SelectionChanged"/>
+        <Button x:Name="Lock_in_KPOGS" Content="Rendben" HorizontalAlignment="Center"  Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Click="Lock_in_KPOGS_Click"/>
+
+        <Border Grid.Row="4" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBox x:Name="jatek" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" IsHitTestVisible="False" BorderThickness="0" BorderBrush="Transparent"/>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Page>

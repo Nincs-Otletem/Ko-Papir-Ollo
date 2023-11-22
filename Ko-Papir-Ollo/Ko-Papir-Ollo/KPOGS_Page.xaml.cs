@@ -41,7 +41,7 @@ namespace Ko_Papir_Ollo
         {
             if (valasztott_KPOGS == "")
             {
-                eredmeny_KPOGS.Text += "Hiba! Válassz egy kézmozdulatot!\n";
+                jatek.Text += "Hiba! Válassz egy kézmozdulatot!\n";
             }
             else
             {
@@ -68,17 +68,17 @@ namespace Ko_Papir_Ollo
                 }
                 if (gep_valasztott_KPOGS == valasztott_KPOGS)
                 {
-                    eredmeny_KPOGS.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott_KPOGS}-t választottatok!\n");
+                    jatek.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott_KPOGS}-t választottatok!\n");
                 }
                 else
                 {
                     if ((gep_valasztott_KPOGS == "Kő" && (valasztott_KPOGS == "Olló" || valasztott_KPOGS == "Gyík")) || (gep_valasztott_KPOGS == "Papír" && (valasztott_KPOGS == "Kő" || valasztott_KPOGS == "Spock")) || (gep_valasztott_KPOGS == "Olló" && (valasztott_KPOGS == "Papír" || valasztott_KPOGS == "Gyík")) || (gep_valasztott_KPOGS == "Gyík" && (valasztott_KPOGS == "Papír" || valasztott_KPOGS == "Spock")) || (gep_valasztott_KPOGS == "Spock" && (valasztott_KPOGS == "Kő" || valasztott_KPOGS == "Olló")))
                     {
-                        eredmeny_KPOGS.Text += Convert.ToString($"Vesztettél! {gep_valasztott_KPOGS} > {valasztott_KPOGS}\n");
+                        jatek.Text += Convert.ToString($"Vesztettél! {gep_valasztott_KPOGS} > {valasztott_KPOGS}\n");
                     }
                     if ((valasztott_KPOGS == "Kő" && (gep_valasztott_KPOGS == "Olló" || gep_valasztott_KPOGS == "Gyík")) || (valasztott_KPOGS == "Papír" && (gep_valasztott_KPOGS == "Kő" || gep_valasztott_KPOGS == "Spock")) || (valasztott_KPOGS == "Olló" && (gep_valasztott_KPOGS == "Papír" || gep_valasztott_KPOGS == "Gyík")) || (valasztott_KPOGS == "Gyík" && (gep_valasztott_KPOGS == "Papír" || gep_valasztott_KPOGS == "Spock")) || (valasztott_KPOGS == "Spock" && (gep_valasztott_KPOGS == "Kő" || gep_valasztott_KPOGS == "Olló")))
                     {
-                        eredmeny_KPOGS.Text += Convert.ToString($"Nyertél! {valasztott_KPOGS} > {gep_valasztott_KPOGS}\n");
+                        jatek.Text += Convert.ToString($"Nyertél! {valasztott_KPOGS} > {gep_valasztott_KPOGS}\n");
                     }
                 }
             }

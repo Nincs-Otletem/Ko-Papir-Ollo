@@ -41,7 +41,7 @@ namespace Ko_Papir_Ollo
         {
             if (valasztott == "")
             {
-                eredmenyek.Text += "Hiba! Válassz egy kézmozdulatot!\n";
+                jatek.Text += "Hiba! Válassz egy kézmozdulatot!\n";
             }
             else
             {
@@ -60,17 +60,17 @@ namespace Ko_Papir_Ollo
                 }
                 if (gep_valasztott == valasztott)
                 {
-                    eredmenyek.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott}-t választottatok!\n");
+                    jatek.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott}-t választottatok!\n");
                 }
                 else
                 {
                     if ((gep_valasztott == "Kő" && valasztott == "Olló") || (gep_valasztott == "Papír" && valasztott == "Kő") || (gep_valasztott == "Olló" && valasztott == "Papír"))
                     {
-                        eredmenyek.Text += Convert.ToString($"Vesztettél! {gep_valasztott} > {valasztott}\n");
+                        jatek.Text += Convert.ToString($"Vesztettél! {gep_valasztott} > {valasztott}\n");
                     }
                     if ((valasztott == "Kő" && gep_valasztott == "Olló") || (valasztott == "Papír" && gep_valasztott == "Kő") || (valasztott == "Olló" && gep_valasztott == "Papír"))
                     {
-                        eredmenyek.Text += Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
+                        jatek.Text += Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
                     }
                 }
             }
