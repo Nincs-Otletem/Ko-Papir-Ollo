@@ -12,12 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Ko_Papir_Ollo
 {
-    /// <summary>
-    /// Interaction logic for MainPage.xaml
-    /// </summary>
     public partial class MainPage : Page
     {
         public MainPage()
@@ -35,7 +33,7 @@ namespace Ko_Papir_Ollo
             {
                 if (KPO_pipa.IsChecked == true)
                 {                
-                    KPO_Page kpo_Page = new KPO_Page();
+                    KPO_Page kpo_Page = new KPO_Page(nevbox.Text);
                     NavigationService.Navigate(kpo_Page); 
                 }
                 if (KPOGS_pipa.IsChecked == true)

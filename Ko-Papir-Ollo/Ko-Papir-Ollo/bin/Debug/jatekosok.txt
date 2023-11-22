@@ -1,0 +1,14 @@
+Márk;10;9;5
+Szilárd;7;9;8
+Dávid;12;6;6
+Péter;14;4;6
+Dominik;7;10;7
+Eszter;6;12;6
+Virág;8;10;6
+Márton;11;9;4
+Bence;6;9;9
+János;12;9;3
+Ákos;10;13;1
+Tibor;9;10;5
+Ábrahám;9;11;4
+Géza;2;1;1
