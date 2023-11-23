@@ -1,19 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
-using static Ko_Papir_Ollo.KPO_Page;
 
 namespace Ko_Papir_Ollo
 {
@@ -23,37 +12,46 @@ namespace Ko_Papir_Ollo
         private string gep_valasztott = "";
         private Random random = new Random();
 
-        // Példa egy Jatekos osztályra, ahogy a kódból sejthető
         public class Jatekos
         {
             public string Nev { get; set; }
             public int NyertJatek { get; set; }
             public int VesztettJatek { get; set; }
             public int DontetlenJatek { get; set; }
-            public int NyertKor { get; set; }
-            public int VesztettKor { get; set; }
-            public int DontetlenKor { get; set; }
 
+            // Konstruktor a név alapján
+            public Jatekos(string nev)
+            {
+                Nev = nev;
+                NyertJatek = 0;
+                VesztettJatek = 0;
+                DontetlenJatek = 0;
+            }
 
-            public Jatekos(string sor)
+            // Konstruktor a sor alapján
+            public Jatekos(string sor, int a)
             {
                 string[] adatok = sor.Split(';');
-                Nev = adatok[0];
-                NyertJatek = Convert.ToInt32(adatok[1]);
-                VesztettJatek = Convert.ToInt32(adatok[2]);
-                DontetlenJatek = Convert.ToInt32(adatok[3]);
-                NyertKor = 0;
-                VesztettKor = 0;
-                DontetlenKor = 0;
+
+                // Ellenőrizzük, hogy van-e elegendő elem az adatok tömbben
+                if (adatok.Length >= 4)
+                {
+                    Nev = adatok[0];
+                    NyertJatek = Convert.ToInt32(adatok[1]);
+                    VesztettJatek = Convert.ToInt32(adatok[2]);
+                    DontetlenJatek = Convert.ToInt32(adatok[3]);
+                }
             }
 
             public string Sorra()
             {
-                return $"{Nev};{NyertJatek};{VesztettJatek};{DontetlenJatek}\n";
+                return $"{Nev};{NyertJatek};{VesztettJatek};{DontetlenJatek};";
             }
         }
+
         private Jatekos Jatekoss { get; set; }
         private List<Jatekos> Jatekosok = new List<Jatekos>();
+
         public KPO_Page(string jatekos)
         {
             InitializeComponent();
@@ -119,23 +117,26 @@ namespace Ko_Papir_Ollo
                 Jatekosok.Add(new Jatekos(sor));
             }
         }
+
         private void JatekosBelepese(string jatekos)
         {
             UserStats.Text = jatekos + UserStats.Text;
-
             Jatekoss = Jatekosok.Find(x => x.Nev == jatekos);
             if (Jatekoss == null)
             {
                 try
                 {
                     Jatekoss = new Jatekos(jatekos);
+                    Jatekosok.Add(Jatekoss);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Hibás formátumú adatok a játékos létrehozásánál.");
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Hiba történt a Jatekos konstruktorban: {ex.Message}");
                 }
-                Jatekosok.Add(Jatekoss);
-
             }
         }
 
@@ -145,7 +146,6 @@ namespace Ko_Papir_Ollo
             foreach (Jatekos jatekos in Jatekosok) sorok.Add(jatekos.Sorra());
             File.WriteAllLines("jatekosok.txt", sorok);
             MessageBox.Show("Az adatok sikeresen mentve lettek.");
-
         }
     }
 }

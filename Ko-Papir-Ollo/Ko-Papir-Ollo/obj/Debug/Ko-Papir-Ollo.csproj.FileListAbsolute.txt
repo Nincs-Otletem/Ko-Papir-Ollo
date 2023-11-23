@@ -120,3 +120,9 @@ C:\Users\Boldi\Desktop\OverJuiced\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\
 C:\Users\Boldi\Desktop\OverJuiced\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.csproj.CoreCompileInputs.cache
 C:\Users\Boldi\Desktop\OverJuiced\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.exe
 C:\Users\Boldi\Desktop\OverJuiced\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\Ko-Papir-Ollo.pdb
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Page.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Page.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainPage.g.cs
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPOGS_Page.baml
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\KPO_Page.baml
+C:\Users\admin\Desktop\vscprojs\Ko-Papir-Ollo\Ko-Papir-Ollo\Ko-Papir-Ollo\obj\Debug\MainPage.baml
