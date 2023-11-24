@@ -63,18 +63,41 @@ namespace Ko_Papir_Ollo
 
         private void KPO_valasztas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            hiba.Content = "";
             valasztott = Convert.ToString(KPO_valasztas.SelectedValue);
         }
 
-        private void Lock_in_button_Click(object sender, RoutedEventArgs e)
+        void Ko_Onclick(object sender, RoutedEventArgs e)
+        {
+            valasztott = "Kő";
+            hiba.Content = "";
+            Lock_in_button_Click();
+        }
+
+        void Papir_Onclick(object sender, RoutedEventArgs e)
+        {
+            valasztott = "Papír";
+            hiba.Content = "";
+            Lock_in_button_Click();
+        }
+
+        void Ollo_Onclick(object sender, RoutedEventArgs e)
+        {
+            valasztott = "Olló";
+            hiba.Content = "";
+            Lock_in_button_Click();
+
+        }
+
+        private void Lock_in_button_Click()
         {
             if (valasztott == "" && JatszottKor < 3)
             {
-                jatek.Text += "Hiba! Válassz egy kézmozdulatot!\n";
+                hiba.Content = "Hiba! Válassz egy kézmozdulatot!\n";
             }
             else if (JatszottKor >= 3)
-            {
-                jatek.Text += "Lejátszottad  a 3 kört ebben a játszmában!\n";
+            {          
+                hiba.Content = "Lejátszottad  a 3 kört ebben a játszmában!\n";
             }
             else
             {
@@ -97,19 +120,19 @@ namespace Ko_Papir_Ollo
 
                 if (gep_valasztott == valasztott)
                 {
-                    jatek.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott}-t választottatok!\n");
+                    //jatek.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott}-t választottatok!\n");
                 }
                 else
                 {
                     if ((gep_valasztott == "Kő" && valasztott == "Olló") || (gep_valasztott == "Papír" && valasztott == "Kő") || (gep_valasztott == "Olló" && valasztott == "Papír"))
                     {
                         KorPont--;
-                        jatek.Text += Convert.ToString($"Vesztettél! {gep_valasztott} > {valasztott}\n");
+                        //jatek.Text += Convert.ToString($"Vesztettél! {gep_valasztott} > {valasztott}\n");
                     }
                     if ((valasztott == "Kő" && gep_valasztott == "Olló") || (valasztott == "Papír" && gep_valasztott == "Kő") || (valasztott == "Olló" && gep_valasztott == "Papír"))
                     {
                         KorPont++;
-                        jatek.Text += Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
+                        //jatek.Text += Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
                     }
                 }
                 JatekErtekelese();
@@ -168,7 +191,7 @@ namespace Ko_Papir_Ollo
                     nyertes = "nincs";
                 }
                 MessageBox.Show($"A játék abszolút győztese: {nyertes}!");
-                jatek.Text += Convert.ToString($"A játék véget ért, eredményed mentésre került.\n");
+                //jatek.Text += Convert.ToString($"A játék véget ért, eredményed mentésre került.\n");
                 JatekosokMentese();
             }
 
