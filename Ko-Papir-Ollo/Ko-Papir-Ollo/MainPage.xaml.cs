@@ -38,7 +38,7 @@ namespace Ko_Papir_Ollo
                 }
                 if (KPOGS_pipa.IsChecked == true)
                 {
-                    KPOGS_Page kpogs_Page = new KPOGS_Page();
+                    KPOGS_Page kpogs_Page = new KPOGS_Page(nevbox.Text);
                     NavigationService.Navigate(kpogs_Page);
                 }
             }

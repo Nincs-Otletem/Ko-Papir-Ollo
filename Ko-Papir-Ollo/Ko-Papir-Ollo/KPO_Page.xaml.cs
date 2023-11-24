@@ -74,7 +74,7 @@ namespace Ko_Papir_Ollo
             }
             else if (JatszottKor >= 3)
             {
-                jatek.Text += "Lejátszottad 3 kört ebben a játszmában!\n";
+                jatek.Text += "Lejátszottad  a 3 kört ebben a játszmában!\n";
             }
             else
             {
