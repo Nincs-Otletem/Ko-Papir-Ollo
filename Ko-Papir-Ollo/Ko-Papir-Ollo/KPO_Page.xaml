@@ -36,13 +36,13 @@
         <Label x:Name="hiba" Content="" Grid.Row="4" Grid.Column="0" Margin="0,10,-1,10" Panel.ZIndex="-3" HorizontalAlignment="Center" />
 
         <Button Name="ko" Width="50" Height="30" Click="Ko_Onclick" Grid.Row="3" Grid.Column="0">
-            <Image Source="image\ko.png"></Image>
+            <Image Source="/ko.png"></Image>
         </Button>
         <Button Name="papir" Width="50" Height="30" Click="Papir_Onclick" Grid.Row="3" Grid.Column="1">
-            <Image Source="image\papir.png"></Image>
+            <Image Source="/papir.png"></Image>
         </Button>
         <Button Name="ollo" Width="50" Height="30" Click="Ollo_Onclick" Grid.Row="3" Grid.Column="2">
-            <Image Source="image\ollo.png"></Image>
+            <Image Source="/ollo.png"></Image>
         </Button>
     </Grid>
 </Page>
