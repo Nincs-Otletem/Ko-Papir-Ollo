@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Ko_Papir_Ollo
 {
@@ -11,10 +12,13 @@ namespace Ko_Papir_Ollo
         private string valasztott = "";
         private string gep_valasztott = "";
         private Random random = new Random();
-        private int KorPont;
-        private int JatszottKor;
         private bool IG = true;
         private string nyertes;
+        private int GyoztesKor;
+        private int VesztesKor;
+        private int DontetlenKor;
+        private int JatszottKor;
+        private string playah;
 
         public class Jatekos
         {
@@ -55,90 +59,96 @@ namespace Ko_Papir_Ollo
             InitializeComponent();
             JatekosokBetoltese();
             JatekosBelepese(jatekos);
-            KPO_valasztas.Items.Add("Kő");
-            KPO_valasztas.Items.Add("Papír");
-            KPO_valasztas.Items.Add("Olló");
+            playah = jatekos; 
 
-        }
-
-        private void KPO_valasztas_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            hiba.Content = "";
-            valasztott = Convert.ToString(KPO_valasztas.SelectedValue);
-        }
-
+    }
         void Ko_Onclick(object sender, RoutedEventArgs e)
         {
             valasztott = "Kő";
-            hiba.Content = "";
+            playerImage.Source = new BitmapImage(new Uri("/image/ko.jpg", UriKind.Relative));
             Lock_in_button_Click();
         }
 
         void Papir_Onclick(object sender, RoutedEventArgs e)
         {
             valasztott = "Papír";
-            hiba.Content = "";
+            playerImage.Source = new BitmapImage(new Uri("/image/papir.jpg", UriKind.Relative));
             Lock_in_button_Click();
         }
 
         void Ollo_Onclick(object sender, RoutedEventArgs e)
         {
             valasztott = "Olló";
-            hiba.Content = "";
+            playerImage.Source = new BitmapImage(new Uri("/image/ollo.jpg", UriKind.Relative));
             Lock_in_button_Click();
 
         }
 
         private void Lock_in_button_Click()
         {
-            if (valasztott == "" && JatszottKor < 3)
-            {
-                hiba.Content = "Hiba! Válassz egy kézmozdulatot!\n";
-            }
-            else if (JatszottKor >= 3)
+            if (JatszottKor >= 3)
             {          
-                hiba.Content = "Lejátszottad  a 3 kört ebben a játszmában!\n";
+                Console.Text = "Lejátszottad  a 3 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
             }
             else
             {
+                if(CurrentGame.Visibility == Visibility.Hidden) CurrentGame.Visibility = Visibility.Visible;
                 JatszottKor++;
                 int cucc = random.Next(1, 4);
                 switch (cucc)
                 {
                     case 1:
                         gep_valasztott = "Kő";
+                        robotImage.Source = new BitmapImage(new Uri("/image/ko.jpg", UriKind.Relative));
                         break;
 
                     case 2:
                         gep_valasztott = "Papír";
+                        robotImage.Source = new BitmapImage(new Uri("/image/papir.jpg", UriKind.Relative));
                         break;
 
                     case 3:
                         gep_valasztott = "Olló";
+                        robotImage.Source = new BitmapImage(new Uri("/image/ollo.jpg", UriKind.Relative));
                         break;
                 }
 
                 if (gep_valasztott == valasztott)
                 {
-                    //jatek.Text += Convert.ToString($"Döntetlen mind a ketten {valasztott}-t választottatok!\n");
+                    DontetlenKor++;
+                    Console.Text = Convert.ToString($"Döntetlen mind a ketten {valasztott}-t \n választottatok!\n");
                 }
                 else
                 {
                     if ((gep_valasztott == "Kő" && valasztott == "Olló") || (gep_valasztott == "Papír" && valasztott == "Kő") || (gep_valasztott == "Olló" && valasztott == "Papír"))
                     {
-                        KorPont--;
-                        //jatek.Text += Convert.ToString($"Vesztettél! {gep_valasztott} > {valasztott}\n");
+                        VesztesKor++;
+                        Console.Text = Convert.ToString($"Vesztettél! {gep_valasztott} > {valasztott}\n");
                     }
                     if ((valasztott == "Kő" && gep_valasztott == "Olló") || (valasztott == "Papír" && gep_valasztott == "Kő") || (valasztott == "Olló" && gep_valasztott == "Papír"))
                     {
-                        KorPont++;
-                        //jatek.Text += Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
+                        GyoztesKor++;
+                        Console.Text = Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
                     }
                 }
+                RoundVictory.Text = "Nyert kör: " + Convert.ToString(GyoztesKor);
+                RoundDraw.Text =  "Döntetlen kör: " + Convert.ToString(DontetlenKor);
+                RoundDefeat.Text = "Vesztett kör: " + Convert.ToString(VesztesKor);
                 JatekErtekelese();
             }
         }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            NavigationService.Navigate(mainPage);
+        }
+
+        private void RestartButton_Click(object sender, RoutedEventArgs e)
+        { 
+            KPO_Page kpo_Page = new KPO_Page(playah);
+            NavigationService.Navigate(kpo_Page);
+        }
         private void JatekosokBetoltese()
         {
             foreach (string sor in File.ReadAllLines("jatekosok.txt"))
@@ -151,6 +161,7 @@ namespace Ko_Papir_Ollo
         private void JatekosBelepese(string jatekos)
         {
             UserStats.Text = jatekos + UserStats.Text;
+            UserChoice.Text = jatekos + UserChoice.Text;
             Jatekoss = Jatekosok.Find(x => x.Nev == jatekos);
             if (Jatekoss == null)
             {
@@ -168,6 +179,10 @@ namespace Ko_Papir_Ollo
                     MessageBox.Show($"Hiba történt a Jatekos konstruktorban: {ex.Message}");
                 }
             }
+            TotalVictory.Text = TotalVictory.Text + Jatekoss.NyertJatek;
+            TotalDraw.Text = TotalDraw.Text + Jatekoss.DontetlenJatek;
+            TotalDefeat.Text = TotalDefeat.Text + Jatekoss.VesztettJatek;
+
         }
 
         private void JatekErtekelese()
@@ -175,12 +190,12 @@ namespace Ko_Papir_Ollo
             if (IG == true && JatszottKor == 3)
             {
                 IG = false;
-                if (KorPont > 0)
+                if (GyoztesKor > VesztesKor && GyoztesKor > DontetlenKor)
                 {
                     Jatekoss.NyertJatek++;
                     nyertes = Jatekoss.Nev;
                 }
-                else if (KorPont < 0)
+                else if (VesztesKor > GyoztesKor && VesztesKor > DontetlenKor)
                 {
                     Jatekoss.VesztettJatek++;
                     nyertes = "LaciBot2000";
@@ -190,8 +205,11 @@ namespace Ko_Papir_Ollo
                     Jatekoss.DontetlenJatek++;
                     nyertes = "nincs";
                 }
-                MessageBox.Show($"A játék abszolút győztese: {nyertes}!");
-                //jatek.Text += Convert.ToString($"A játék véget ért, eredményed mentésre került.\n");
+                CurrentGame.Visibility = Visibility.Hidden;
+                Console.Text = Convert.ToString($"A játék abszolút győztese: {nyertes}!\nA játék véget ért, eredményed mentésre került.");
+                TotalVictory.Text = "Nyert játék: " + Jatekoss.NyertJatek;
+                TotalDraw.Text = "Döntetlen játék: " + Jatekoss.DontetlenJatek;
+                TotalDefeat.Text = "Vesztett játék: " + Jatekoss.VesztettJatek;
                 JatekosokMentese();
             }
 
