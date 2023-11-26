@@ -65,21 +65,21 @@ namespace Ko_Papir_Ollo
         void Ko_Onclick(object sender, RoutedEventArgs e)
         {
             valasztott = "Kő";
-            playerImage.Source = new BitmapImage(new Uri("/image/ko.jpg", UriKind.Relative));
+            playerImage.Source = new BitmapImage(new Uri("/image/ko.png", UriKind.Relative));
             Lock_in_button_Click();
         }
 
         void Papir_Onclick(object sender, RoutedEventArgs e)
         {
             valasztott = "Papír";
-            playerImage.Source = new BitmapImage(new Uri("/image/papir.jpg", UriKind.Relative));
+            playerImage.Source = new BitmapImage(new Uri("/image/papir.png", UriKind.Relative));
             Lock_in_button_Click();
         }
 
         void Ollo_Onclick(object sender, RoutedEventArgs e)
         {
             valasztott = "Olló";
-            playerImage.Source = new BitmapImage(new Uri("/image/ollo.jpg", UriKind.Relative));
+            playerImage.Source = new BitmapImage(new Uri("/image/ollo.png", UriKind.Relative));
             Lock_in_button_Click();
 
         }
@@ -93,23 +93,25 @@ namespace Ko_Papir_Ollo
             else
             {
                 if(CurrentGame.Visibility == Visibility.Hidden) CurrentGame.Visibility = Visibility.Visible;
+                if (playerImage.Opacity != 1) playerImage.Opacity = 1;
+                if (robotImage.Opacity != 1) robotImage.Opacity = 1;
                 JatszottKor++;
                 int cucc = random.Next(1, 4);
                 switch (cucc)
                 {
                     case 1:
                         gep_valasztott = "Kő";
-                        robotImage.Source = new BitmapImage(new Uri("/image/ko.jpg", UriKind.Relative));
+                        robotImage.Source = new BitmapImage(new Uri("/image/ko.png", UriKind.Relative));
                         break;
 
                     case 2:
                         gep_valasztott = "Papír";
-                        robotImage.Source = new BitmapImage(new Uri("/image/papir.jpg", UriKind.Relative));
+                        robotImage.Source = new BitmapImage(new Uri("/image/papir.png", UriKind.Relative));
                         break;
 
                     case 3:
                         gep_valasztott = "Olló";
-                        robotImage.Source = new BitmapImage(new Uri("/image/ollo.jpg", UriKind.Relative));
+                        robotImage.Source = new BitmapImage(new Uri("/image/ollo.png", UriKind.Relative));
                         break;
                 }
 
