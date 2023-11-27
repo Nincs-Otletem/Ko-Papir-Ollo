@@ -64,49 +64,62 @@ namespace Ko_Papir_Ollo
 
         void Ko_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Kő";
-            playerImage.Source = new BitmapImage(new Uri("/image/ko.png", UriKind.Relative));
-            Lock_in_KPOGS_Click();
+            if (IG)
+            {
+                valasztott = "Kő";
+                playerImage.Source = new BitmapImage(new Uri("/image/ko.png", UriKind.Relative));
+                Lock_in_KPOGS_Click();
+            }
+            else Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         void Papir_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Papír";
-            playerImage.Source = new BitmapImage(new Uri("/image/papir.png", UriKind.Relative));
-            Lock_in_KPOGS_Click();
+            if (IG)
+            {
+                valasztott = "Papír";
+                playerImage.Source = new BitmapImage(new Uri("/image/papir.png", UriKind.Relative));
+                Lock_in_KPOGS_Click();
+            }
+            else Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         void Ollo_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Olló";
-            playerImage.Source = new BitmapImage(new Uri("/image/ollo.png", UriKind.Relative));
-            Lock_in_KPOGS_Click();
-
+            if (IG)
+            {
+                valasztott = "Olló";
+                playerImage.Source = new BitmapImage(new Uri("/image/ollo.png", UriKind.Relative));
+                Lock_in_KPOGS_Click();
+            }
+            else Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         void Gyik_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Gyík";
-            playerImage.Source = new BitmapImage(new Uri("/image/gyik.png", UriKind.Relative));
-            Lock_in_KPOGS_Click();
-
+            if (IG)
+            {
+                valasztott = "Gyík";
+                playerImage.Source = new BitmapImage(new Uri("/image/gyik.png", UriKind.Relative));
+                Lock_in_KPOGS_Click();
+            }
+            else Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         void Spock_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Spock";
-            playerImage.Source = new BitmapImage(new Uri("/image/spock.png", UriKind.Relative));
-            Lock_in_KPOGS_Click();
-
+            if (IG)
+            {
+                valasztott = "Spock";
+                playerImage.Source = new BitmapImage(new Uri("/image/spock.png", UriKind.Relative));
+                Lock_in_KPOGS_Click();
+            }
+            else Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         private void Lock_in_KPOGS_Click()
         {
-            if (JatszottKor >= 5)
-            {
-                Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
-            }
-            else
+            if(!(JatszottKor >= 5))
             {
                 if (CurrentGame.Visibility == Visibility.Hidden) CurrentGame.Visibility = Visibility.Visible;
                 if (playerImage.Opacity != 1) playerImage.Opacity = 1;
@@ -159,6 +172,7 @@ namespace Ko_Papir_Ollo
                         Console.Text = Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
                     }
                 }
+                CurrentRound.Text = $"Kör: {Convert.ToString(JatszottKor)}/5";
                 RoundVictory.Text = "Nyert kör: " + Convert.ToString(GyoztesKor);
                 RoundDraw.Text = "Döntetlen kör: " + Convert.ToString(DontetlenKor);
                 RoundDefeat.Text = "Vesztett kör: " + Convert.ToString(VesztesKor);
@@ -216,12 +230,12 @@ namespace Ko_Papir_Ollo
             if (IG == true && JatszottKor == 5)
             {
                 IG = false;
-                if (GyoztesKor > VesztesKor && GyoztesKor > DontetlenKor)
+                if (GyoztesKor > VesztesKor)
                 {
                     Jatekoss.NyertJatek++;
                     nyertes = Jatekoss.Nev;
                 }
-                else if (VesztesKor > GyoztesKor && VesztesKor > DontetlenKor)
+                else if (VesztesKor > GyoztesKor)
                 {
                     Jatekoss.VesztettJatek++;
                     nyertes = "LaciBot2000";
@@ -233,7 +247,7 @@ namespace Ko_Papir_Ollo
                 }
                 CurrentGame.Visibility = Visibility.Hidden;
                 Console.Margin = new Thickness(0, 0, 0, 0);
-                Console.Text = Convert.ToString($"A játék abszolút győztese: {nyertes}!\nA játék véget ért, eredményed mentésre került.");
+                Console.Text = Convert.ToString($"Eredmény: {GyoztesKor} - {VesztesKor}\n\nA játék abszolút győztese: {nyertes}!\nA játék véget ért, eredményed mentésre került.");
                 TotalVictory.Text = "Nyert játék: " + Jatekoss.NyertJatek;
                 TotalDraw.Text = "Döntetlen játék: " + Jatekoss.DontetlenJatek;
                 TotalDefeat.Text = "Vesztett játék: " + Jatekoss.VesztettJatek;

@@ -37,6 +37,7 @@
 
             <StackPanel x:Name="CurrentGame" Grid.Row="3" Grid.Column="1" HorizontalAlignment="left" VerticalAlignment="Center" Visibility="Hidden">
                 <TextBlock TextWrapping="Wrap" Text="Játék állas:" TextAlignment="Center" Foreground="White" Margin="0,0,0,10" Padding="10" FontSize="15" FontWeight="Bold" />
+                <TextBlock x:Name="CurrentRound" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
                 <TextBlock x:Name="RoundVictory" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
                 <TextBlock x:Name="RoundDraw" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
                 <TextBlock x:Name="RoundDefeat" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>

@@ -64,33 +64,40 @@ namespace Ko_Papir_Ollo
     }
         void Ko_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Kő";
-            playerImage.Source = new BitmapImage(new Uri("/image/ko.png", UriKind.Relative));
-            Lock_in_button_Click();
+            if (IG) 
+            {
+                valasztott = "Kő";
+                playerImage.Source = new BitmapImage(new Uri("/image/ko.png", UriKind.Relative));
+                Lock_in_button_Click();
+            }
+            else Console.Text = "Lejátszottad  a 3 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         void Papir_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Papír";
-            playerImage.Source = new BitmapImage(new Uri("/image/papir.png", UriKind.Relative));
-            Lock_in_button_Click();
+            if (IG)
+            {
+                valasztott = "Papír";
+                playerImage.Source = new BitmapImage(new Uri("/image/papir.png", UriKind.Relative));
+                Lock_in_button_Click();
+            }
+            else Console.Text = "Lejátszottad  a 3 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         void Ollo_Onclick(object sender, RoutedEventArgs e)
         {
-            valasztott = "Olló";
-            playerImage.Source = new BitmapImage(new Uri("/image/ollo.png", UriKind.Relative));
-            Lock_in_button_Click();
-
+            if (IG)
+            {
+                valasztott = "Olló";
+                playerImage.Source = new BitmapImage(new Uri("/image/ollo.png", UriKind.Relative));
+                Lock_in_button_Click();
+            }
+            else Console.Text = "Lejátszottad  a 3 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
         }
 
         private void Lock_in_button_Click()
         {
-            if (JatszottKor >= 3)
-            {          
-                Console.Text = "Lejátszottad  a 3 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
-            }
-            else
+            if(!(JatszottKor >= 3))
             {
                 if(CurrentGame.Visibility == Visibility.Hidden) CurrentGame.Visibility = Visibility.Visible;
                 if (playerImage.Opacity != 1) playerImage.Opacity = 1;
@@ -133,6 +140,7 @@ namespace Ko_Papir_Ollo
                         Console.Text = Convert.ToString($"Nyertél! {valasztott} > {gep_valasztott}\n");
                     }
                 }
+                CurrentRound.Text = $"Kör: {Convert.ToString(JatszottKor)}/3";
                 RoundVictory.Text = "Nyert kör: " + Convert.ToString(GyoztesKor);
                 RoundDraw.Text =  "Döntetlen kör: " + Convert.ToString(DontetlenKor);
                 RoundDefeat.Text = "Vesztett kör: " + Convert.ToString(VesztesKor);
@@ -192,12 +200,12 @@ namespace Ko_Papir_Ollo
             if (IG == true && JatszottKor == 3)
             {
                 IG = false;
-                if (GyoztesKor > VesztesKor && GyoztesKor > DontetlenKor)
+                if (GyoztesKor > VesztesKor)
                 {
                     Jatekoss.NyertJatek++;
                     nyertes = Jatekoss.Nev;
                 }
-                else if (VesztesKor > GyoztesKor && VesztesKor > DontetlenKor)
+                else if (VesztesKor > GyoztesKor)
                 {
                     Jatekoss.VesztettJatek++;
                     nyertes = "LaciBot2000";
@@ -208,7 +216,7 @@ namespace Ko_Papir_Ollo
                     nyertes = "nincs";
                 }
                 CurrentGame.Visibility = Visibility.Hidden;
-                Console.Text = Convert.ToString($"A játék abszolút győztese: {nyertes}!\nA játék véget ért, eredményed mentésre került.");
+                Console.Text = Convert.ToString($"Eredmény: {GyoztesKor} - {VesztesKor}\n\nA játék abszolút győztese: {nyertes}!\nA játék véget ért, eredményed mentésre került.");
                 TotalVictory.Text = "Nyert játék: " + Jatekoss.NyertJatek;
                 TotalDraw.Text = "Döntetlen játék: " + Jatekoss.DontetlenJatek;
                 TotalDefeat.Text = "Vesztett játék: " + Jatekoss.VesztettJatek;
