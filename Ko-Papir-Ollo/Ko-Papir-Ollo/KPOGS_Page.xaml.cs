@@ -102,9 +102,9 @@ namespace Ko_Papir_Ollo
 
         private void Lock_in_KPOGS_Click()
         {
-            if (JatszottKor >= 3)
+            if (JatszottKor >= 5)
             {
-                Console.Text = "Lejátszottad  a 3 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
+                Console.Text = "Lejátszottad  az 5 kört ebben a játszmában!\nNyomj az újra gombra, vagy lépj vissza a menübe.";
             }
             else
             {
@@ -213,7 +213,7 @@ namespace Ko_Papir_Ollo
         }
         private void JatekErtekelese()
         {
-            if (IG == true && JatszottKor == 3)
+            if (IG == true && JatszottKor == 5)
             {
                 IG = false;
                 if (GyoztesKor > VesztesKor && GyoztesKor > DontetlenKor)
