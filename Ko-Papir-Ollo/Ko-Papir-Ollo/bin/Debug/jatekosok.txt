@@ -32,3 +32,7 @@ ggg;0;1;0
 ffffffffffffffffffffffffffffff;1;0;0
 fffffffffffffff;0;0;1
 rtz;0;1;0
+ ;6;4;5
+................;1;0;0
+jkjkj;0;1;0
+

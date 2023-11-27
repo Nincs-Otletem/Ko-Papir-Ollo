@@ -21,7 +21,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <Label Content="Adja meg a nevét:" 
+                    <Label Content="Add meg a neved:" 
                            VerticalAlignment="Center" HorizontalAlignment="Center" 
                            FontSize="24" FontWeight="Bold" Foreground="White"/>
                     <TextBox x:Name="nevbox" Grid.Row="1" Margin="0,10" VerticalAlignment="Center" 

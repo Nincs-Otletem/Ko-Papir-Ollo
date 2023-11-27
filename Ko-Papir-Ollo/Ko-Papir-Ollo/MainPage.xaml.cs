@@ -36,18 +36,22 @@ namespace Ko_Papir_Ollo
             {
                 if (nevbox.Text.Length <= 16) 
                 {
-                    if (KPOButton.IsChecked == true)
+                    if (!nevbox.Text.Contains(";"))
                     {
-                        KPO_Page kpo_Page = new KPO_Page(nevbox.Text);
-                        NavigationService.Navigate(kpo_Page);
+                        if (KPOButton.IsChecked == true)
+                        {
+                            KPO_Page kpo_Page = new KPO_Page(nevbox.Text);
+                            NavigationService.Navigate(kpo_Page);
+                        }
+                        if (KPOGSButton.IsChecked == true)
+                        {
+                            KPOGS_Page kpogs_Page = new KPOGS_Page(nevbox.Text);
+                            NavigationService.Navigate(kpogs_Page);
+                        }
                     }
-                    if (KPOGSButton.IsChecked == true)
-                    {
-                        KPOGS_Page kpogs_Page = new KPOGS_Page(nevbox.Text);
-                        NavigationService.Navigate(kpogs_Page);
-                    }
+                    else hiba.Content = "Nem tartalmazhat pontosvesszőt! (;)";
                 }
-                hiba.Content = "Maximum 16 karakterből állhat a név!";
+                else hiba.Content = "Maximum 16 karakterből állhat a név!";
             }
             else
             {
