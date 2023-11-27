@@ -28,16 +28,27 @@ namespace Ko_Papir_Ollo
                 }
             }
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (KPOButton.IsChecked == false && KPOGSButton.IsChecked == false) hiba.Content = "Válassz ki egy játékmódot!";
-
-            if (nevbox.Text != "")
+            if (KPOButton.IsChecked == false && KPOGSButton.IsChecked == false)
             {
-                if (nevbox.Text.Length <= 16) 
+                hiba.Content = "Válassz ki egy játékmódot!";
+            }
+            else
+            {
+                if (nevbox.Text != "")
                 {
-                    if (!nevbox.Text.Contains(";"))
+                    if (nevbox.Text.Length <= 16)
                     {
+                        foreach (char character in nevbox.Text)
+                        {
+                            if (character == ';')
+                            {
+                                hiba.Content = "Nem tartalmazhat pontosvesszőt! ( ; )";
+                                return;
+                            }
+                        }
                         if (KPOButton.IsChecked == true)
                         {
                             KPO_Page kpo_Page = new KPO_Page(nevbox.Text);
@@ -49,15 +60,16 @@ namespace Ko_Papir_Ollo
                             NavigationService.Navigate(kpogs_Page);
                         }
                     }
-                    else hiba.Content = "Nem tartalmazhat pontosvesszőt! (;)";
+                    else
+                    {
+                        hiba.Content = "Maximum 16 karakterből állhat a név!";
+                    }
                 }
-                else hiba.Content = "Maximum 16 karakterből állhat a név!";
+                else
+                {
+                    hiba.Content = "Adj meg egy nevet!";
+                }
             }
-            else
-            {
-                hiba.Content = "Adj meg egy nevet!";
-            }
-
         }
     }
 }
