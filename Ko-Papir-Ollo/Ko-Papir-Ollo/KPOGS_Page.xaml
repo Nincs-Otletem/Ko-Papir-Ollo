@@ -7,36 +7,63 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="KPOGS_Page">
-    
-    <Grid Margin="5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="1.5*"/>
-            <RowDefinition Height="3*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="UserStats" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="XY eddigi eredményei" VerticalAlignment="Stretch"/>
+    <Viewbox Stretch="Uniform" Width="Auto">
+        <Grid Background="#FF2C3E50" Margin="5" Width="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <TextBox x:Name="eredmenyek" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" IsHitTestVisible="False" Text="Kő Papír Olló" BorderThickness="0" BorderBrush="Transparent"/>
-            </ScrollViewer>
-        </Border>
+            <StackPanel Grid.RowSpan="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="UserStats" TextWrapping="Wrap" Text=" eddigi eredményei:" TextAlignment="Center" Foreground="White" Margin="0,0,0,10" Padding="100,0,100,0" FontSize="15" FontWeight="Bold" />
+                <TextBlock x:Name="TotalVictory" Text="Nyert játék: " Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="TotalDraw" Text="Döntetlen játék: " Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="TotalDefeat" Text="Vesztett játék: " Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+            </StackPanel>
 
-        <TextBlock HorizontalAlignment="Stretch"  Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Válasszon alakzatot, majd nyomjon OK-t:" VerticalAlignment="Top"/>
-        <ComboBox x:Name="KPOGS_valasztas" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" SelectionChanged="KPOGS_valasztas_SelectionChanged"/>
-        <Button x:Name="Lock_in_KPOGS" Content="Rendben" HorizontalAlignment="Center"  Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Click="Lock_in_KPOGS_Click"/>
+            <TextBlock x:Name="UserChoice" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text=" választása" VerticalAlignment="Top" Foreground="White" Padding="20" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="LaciBot2000 választása" VerticalAlignment="Top" Foreground="White" Padding="20" FontSize="20" FontWeight="Bold"/>
+            <Image Name="playerImage" Grid.Row="3" Grid.Column="0" Source="/image/q.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5" Width="200" Height="200" Opacity="0.5"/>
+            <Image Name="robotImage" Grid.Row="3" Grid.Column="2" Source="/image/q.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5" Width="200" Height="200" Opacity="0.5"/>
 
-        <Border Grid.Row="4" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <TextBox x:Name="jatek" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" IsHitTestVisible="False" BorderThickness="0" BorderBrush="Transparent"/>
-            </ScrollViewer>
-        </Border>
-    </Grid>
+            <StackPanel x:Name="CurrentGame" Grid.Row="3" Grid.Column="1" HorizontalAlignment="left" VerticalAlignment="Center" Visibility="Hidden">
+                <TextBlock TextWrapping="Wrap" Text="Játék állas:" TextAlignment="Center" Foreground="White" Margin="0,0,0,10" Padding="10" FontSize="15" FontWeight="Bold" />
+                <TextBlock x:Name="RoundVictory" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="RoundDraw" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="RoundDefeat" Foreground="White" Padding="5" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+            </StackPanel>
+
+            <TextBlock x:Name="Console" Grid.Row="3"  Grid.Column="1" Text="Válaszd ki a választásod!" Foreground="White" Padding="5,10,5,10" FontSize="15" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,0" />
+
+            <WrapPanel Grid.Row="4" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Margin="50,5,50,5">
+                <Button Name="ko" Width="150" Height="150" Click="Ko_Onclick" Background="Transparent" BorderBrush="Transparent" Margin="5">
+                    <Image Stretch="UniformToFill" Source="/image/ko.png"/>
+                </Button>
+                <Button Name="papir" Width="150" Height="150" Click="Papir_Onclick" Background="Transparent" BorderBrush="Transparent" Margin="5">
+                    <Image Source="/image/papir.png" Stretch="UniformToFill"/>
+                </Button>
+                <Button Name="ollo" Width="150" Height="150" Click="Ollo_Onclick" Background="Transparent" BorderBrush="Transparent" Margin="5">
+                    <Image Source="/image/ollo.png" Stretch="UniformToFill"/>
+                </Button>
+                <Button Name="gyik" Width="150" Height="150" Click="Gyik_Onclick" Background="Transparent" BorderBrush="Transparent" Margin="5">
+                    <Image Source="/image/gyik.png" Stretch="UniformToFill"/>
+                </Button>
+                <Button Name="spock" Width="150" Height="150" Click="Spock_Onclick" Background="Transparent" BorderBrush="Transparent" Margin="5">
+                    <Image Source="/image/spock.png" Stretch="UniformToFill"/>
+                </Button>
+            </WrapPanel>
+
+            <Button Name="backButton" Grid.Row="0" Grid.Column="0" Content="Vissza a menübe" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,10,10" Background="#FF1ABC9C" Foreground="White" Padding="25" FontSize="20" FontWeight="Bold" BorderBrush="#FF1ABC9C" BorderThickness="2"/>
+            <Button Name="restartButton" Grid.Row="0" Grid.Column="2" Content="Újra" Click="RestartButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,5,15" Background="#FFD35400" Foreground="White" Padding="25" FontSize="20" FontWeight="Bold" BorderBrush="#FFD35400" BorderThickness="2"/>
+        </Grid>
+    </Viewbox>
 </Page>

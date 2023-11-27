@@ -13,7 +13,7 @@ Tibor;9;10;5
 Ábrahám;9;11;4
 Géza;2;1;1
 aasd;0;1;0
-asd;2;7;2
+asd;6;14;4
 cvb;0;0;1
 g;1;0;1
 teszt;3;1;1
@@ -31,3 +31,4 @@ b;0;0;1
 ggg;0;1;0
 ffffffffffffffffffffffffffffff;1;0;0
 fffffffffffffff;0;0;1
+rtz;0;1;0
